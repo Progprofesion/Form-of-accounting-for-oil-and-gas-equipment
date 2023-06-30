@@ -1,0 +1,9 @@
+.dropdown {
+  display: flex;
+  justify-content: center;
+  &__wrapp {
+    width: 500px;
+    height: 50px;
+    text-align: center;
+  }
+}
