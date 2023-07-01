@@ -17,6 +17,7 @@
     }
 
     input {
+      width: 100px;
       margin-right: 25px;
       margin-left: 5px;
     }
@@ -25,19 +26,21 @@
     margin-top: 20px;
     text-align: right;
     &__numValve {
-      // padding-top: 5px;
       border: 1px solid aliceblue;
     }
   }
 
-  // &__wrappData {
-  //   display: flex;
-  //   width: 50%;
-  //   margin: 25px auto;
-  // }
+  &__buttonWrapp {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    margin: 0 auto;
+  }
+
   &__wrappInputs {
+    position: relative;
     width: 50%;
-    margin: 25px auto;
+    margin: 25px auto 35px;
     text-align: center;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -56,7 +59,26 @@
     div {
       border: 1px solid aliceblue;
     }
+    input {
+      width: 100%;
+      text-align: center;
+    }
   }
+  &__submith {
+    width: 100px;
+    height: 35px;
+  }
+  &__download {
+    width: 100px;
+    height: 35px;
+  }
+}
+
+.inValveValid {
+  position: absolute;
+  bottom: -25px;
+  right: 50%;
+  transform: translateX(+50%);
 }
 
 .numValve1 {
