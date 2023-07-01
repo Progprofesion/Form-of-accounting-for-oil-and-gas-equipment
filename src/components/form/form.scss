@@ -3,13 +3,285 @@
   flex-direction: column;
   margin-top: 75px;
 
+  &__wrappTime {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    &__time {
+      :first-child {
+        width: 50px;
+      }
+      :last-child {
+        width: 50px;
+      }
+    }
+
+    input {
+      margin-right: 25px;
+      margin-left: 5px;
+    }
+  }
+  &__wrappValve {
+    margin-top: 20px;
+    // &__numValve {
+    // }
+  }
+
   &__wrappData {
     display: flex;
-    justify-content: center;
-    margin-right: 50px;
+    width: 50%;
+    margin: 25px auto;
   }
-  &__department {
-    display: flex;
-    justify-content: center;
+  &__wrappInputs {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "valve valve valve drainage drainage drainage mat mat"
+      "valveVolume valveEC valvePh drainValve drainEC drainPh matEc matPh"
+      "volume1 input1 input2 input3 input4 input5 input6 input7"
+      "volume2 input8 input9 input10 input11 input12 input13 input14"
+      "volume3 input15 inout16 input17 input18 input19 input20 input21"
+      "volume4 input22 input23 iuput24 input25 input26 input27 input28"
+      "volume5 input29 input30 input31 input32 input33 input34 input35"
+      "volume6 inoput36 inout37 input38 input39 inout40 input41 input42";
   }
+}
+
+.drainage {
+  grid-area: drainage;
+}
+
+.mat {
+  grid-area: mat;
+}
+
+.input1 {
+  grid-area: input1;
+}
+
+.input2 {
+  grid-area: input2;
+}
+
+.input3 {
+  grid-area: input3;
+}
+
+.input4 {
+  grid-area: input4;
+}
+
+.input5 {
+  grid-area: input5;
+}
+
+.input6 {
+  grid-area: input6;
+}
+
+.input7 {
+  grid-area: input7;
+}
+
+.input8 {
+  grid-area: input8;
+}
+
+.input9 {
+  grid-area: input9;
+}
+
+.input10 {
+  grid-area: input10;
+}
+
+.input11 {
+  grid-area: input11;
+}
+
+.input12 {
+  grid-area: input12;
+}
+
+.input13 {
+  grid-area: input13;
+}
+
+.input14 {
+  grid-area: input14;
+}
+
+.input15 {
+  grid-area: input15;
+}
+
+.inout16 {
+  grid-area: inout16;
+}
+
+.input17 {
+  grid-area: input17;
+}
+
+.input18 {
+  grid-area: input18;
+}
+
+.input19 {
+  grid-area: input19;
+}
+
+.input20 {
+  grid-area: input20;
+}
+
+.input21 {
+  grid-area: input21;
+}
+
+.input22 {
+  grid-area: input22;
+}
+
+.input23 {
+  grid-area: input23;
+}
+
+.iuput24 {
+  grid-area: iuput24;
+}
+
+.input25 {
+  grid-area: input25;
+}
+
+.input26 {
+  grid-area: input26;
+}
+
+.input27 {
+  grid-area: input27;
+}
+
+.input28 {
+  grid-area: input28;
+}
+
+.input29 {
+  grid-area: input29;
+}
+
+.input30 {
+  grid-area: input30;
+}
+
+.input31 {
+  grid-area: input31;
+}
+
+.input32 {
+  grid-area: input32;
+}
+
+.input33 {
+  grid-area: input33;
+}
+
+.input34 {
+  grid-area: input34;
+}
+
+.input35 {
+  grid-area: input35;
+}
+
+.inoput36 {
+  grid-area: inoput36;
+}
+
+.inout37 {
+  grid-area: inout37;
+}
+
+.input38 {
+  grid-area: input38;
+}
+
+.input39 {
+  grid-area: input39;
+}
+
+.inout40 {
+  grid-area: inout40;
+}
+
+.input41 {
+  grid-area: input41;
+}
+
+.input42 {
+  grid-area: input42;
+}
+
+.valve {
+  grid-area: valve;
+}
+
+.valveEC {
+  grid-area: valveEC;
+}
+
+.valvePh {
+  grid-area: valvePh;
+}
+
+.drainValve {
+  grid-area: drainValve;
+}
+
+.drainEC {
+  grid-area: drainEC;
+}
+
+.drainPh {
+  grid-area: drainPh;
+}
+
+.matEc {
+  grid-area: matEc;
+}
+
+.matPh {
+  grid-area: matPh;
+}
+
+.valveVolume {
+  grid-area: valveVolume;
+}
+
+.volume1 {
+  grid-area: volume1;
+}
+
+.volume2 {
+  grid-area: volume2;
+}
+
+.volume3 {
+  grid-area: volume3;
+}
+
+.volume4 {
+  grid-area: volume4;
+}
+
+.volume5 {
+  grid-area: volume5;
+}
+
+.volume6 {
+  grid-area: volume6;
 }
