@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+import { Link } from "react-router-dom";
 import axios from "axios";
 import * as XLSX from "xlsx/xlsx.mjs";
 import "./form.scss";
@@ -16,10 +17,6 @@ const Form = () => {
   });
 
   const { data: products, isLoading, isError } = useGetDbQuery(null);
-
-  // if (products) {
-  //   console.log(products.db);
-  // }
 
   const convertJsonToExcel = () => {
     if (products) {
@@ -348,9 +345,10 @@ const Form = () => {
           </button>
         </div>
       </form>
-      <button onClick={convertJsonToExcel} className="form__download">
-        Получить
-      </button>
+
+      <Link className="form__download" to="/report">
+        <button className="form__download">Получить</button>
+      </Link>
     </>
   );
 };

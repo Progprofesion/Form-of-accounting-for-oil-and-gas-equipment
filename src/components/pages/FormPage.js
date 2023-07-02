@@ -1,16 +1,15 @@
 import Dropdown from "../dropdown/Dropdown";
 import Form from "../form/Form";
-import "./main.scss";
 
-const Main = () => {
+const FormPage = () => {
   return (
-    <div className="main">
+    <section className="formPage">
       <div className="container">
         <Dropdown />
         <Form />
       </div>
-    </div>
+    </section>
   );
 };
 
-export default Main;
+export default FormPage;
