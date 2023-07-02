@@ -1,7 +1,5 @@
-import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
-import Dropdown from "../dropdown/Dropdown";
 import { useSelector } from "react-redux";
 import axios from "axios";
 import "./form.scss";
@@ -26,17 +24,6 @@ const Form = ({ boolean, countView }) => {
   const onSubmit = async (event) => {
     await axios.post("http://localhost:3001/db", event);
   };
-  const [value, setValue] = useState("");
-  let test = 0;
-
-  function handleInputChange(event) {
-    const inputValue = event.target.value;
-    if (inputValue.length === 1 && inputValue !== "0") {
-      setValue(inputValue + ".");
-    } else {
-      setValue(inputValue);
-    }
-  }
 
   return (
     <form action="" onSubmit={handleSubmit(onSubmit)} className="form">
