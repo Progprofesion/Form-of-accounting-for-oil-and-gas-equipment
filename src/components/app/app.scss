@@ -5,8 +5,8 @@
 .container {
   margin: 0 auto;
   max-width: 1224px;
-  height: 100vh;
-  padding-top: 10vh;
+  min-height: 100vh;
+  padding-top: 5vh;
   border: 2px solid aliceblue;
   background: rgb(167, 173, 178);
 }
