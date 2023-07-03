@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import axios from "axios";
-import { setData } from "../../store/reducer/dataSlice";
+
 import handleInputChange from "../../utils/handleInputChange";
+
 import {
   useGetDbQuery,
   useGetInputsQuery,
@@ -16,7 +17,7 @@ import "./form.scss";
 const Form = ({ boolean, countView, slice }) => {
   const [timeFrom, setTimeFrom] = useState("");
   const [timeBefore, setTimeBefore] = useState("");
-  const [date, setDate] = useState("");
+  const [dateDot, setDateDot] = useState("");
 
   const {
     register,
@@ -75,9 +76,9 @@ const Form = ({ boolean, countView, slice }) => {
                           className="dataMeasur"
                           maxLength={10}
                           onChange={(e) =>
-                            handleInputChange(e, setDate, ".", true)
+                            handleInputChange(e, setDateDot, ".", true)
                           }
-                          value={date}
+                          value={dateDot}
                           onKeyDown={(event) => {
                             if (event.key === "ArrowLeft") {
                             } else if (event.key === "ArrowRight") {
@@ -197,7 +198,6 @@ const Form = ({ boolean, countView, slice }) => {
                       ? Object.entries(item)
                           .filter(([key, value]) => key.startsWith("inValve"))
                           .map(([key, value]) => {
-                            console.log(key);
                             return (
                               <p
                                 style={{
