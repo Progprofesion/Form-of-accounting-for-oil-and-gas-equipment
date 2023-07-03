@@ -1,4 +1,4 @@
-import { Routes, Route, BrowserRouter } from "react-router-dom";
+import { Routes, Route, HashRouter } from "react-router-dom";
 import { lazy, Suspense } from "react";
 
 import FormPage from "../pages/FormPage";
@@ -9,7 +9,7 @@ const ReportPage = lazy(() => import("../pages/ReportPage"));
 
 const app = () => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <main className="app">
         <Suspense fallback={"Loading..."}>
           <Routes>
@@ -18,7 +18,7 @@ const app = () => {
           </Routes>
         </Suspense>
       </main>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 

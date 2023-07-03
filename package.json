@@ -22,7 +22,7 @@
     "scripts": {
         "start": "concurrently \"react-scripts start\" \"npx json-server db.json --port 3001\"",
         "predeploy": "npm run build",
-        "deploy": "gh-pages -b build",
+        "deploy": "gh-pages -d build",
         "build": "react-scripts build",
         "test": "react-scripts test",
         "eject": "react-scripts eject"
@@ -46,6 +46,7 @@
         ]
     },
     "devDependencies": {
+        "gh-pages": "^5.0.0",
         "node-sass": "^7.0.3",
         "sass-loader": "^13.3.2"
     }
