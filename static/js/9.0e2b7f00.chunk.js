@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunktest_task_dial_alliance=self.webpackChunktest_task_dial_alliance||[]).push([[9],{9:function(e,a,n){n.r(a),n.d(a,{default:function(){return c}});n(791);var s=n(184),t=n(708),c=function(){return(0,s.jsx)("section",{className:"reportPage",children:(0,s.jsx)("div",{className:"container",children:(0,s.jsx)(t.Z,{boolean:!1,countView:1/0,slice:1})})})}}}]);
+//# sourceMappingURL=9.0e2b7f00.chunk.js.map
