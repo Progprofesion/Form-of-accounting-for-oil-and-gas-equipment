@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/drag-and-drop-calc/static/css/main.8738b80b.css",
-    "main.js": "/drag-and-drop-calc/static/js/main.774a4d4f.js",
-    "static/css/9.eebe1d31.chunk.css": "/drag-and-drop-calc/static/css/9.eebe1d31.chunk.css",
-    "static/js/9.10b1d3eb.chunk.js": "/drag-and-drop-calc/static/js/9.10b1d3eb.chunk.js",
-    "index.html": "/drag-and-drop-calc/index.html",
-    "main.8738b80b.css.map": "/drag-and-drop-calc/static/css/main.8738b80b.css.map",
-    "main.774a4d4f.js.map": "/drag-and-drop-calc/static/js/main.774a4d4f.js.map",
-    "9.eebe1d31.chunk.css.map": "/drag-and-drop-calc/static/css/9.eebe1d31.chunk.css.map",
-    "9.10b1d3eb.chunk.js.map": "/drag-and-drop-calc/static/js/9.10b1d3eb.chunk.js.map"
+    "main.css": "/curly-memory/static/css/main.8738b80b.css",
+    "main.js": "/curly-memory/static/js/main.84f84e5d.js",
+    "static/css/9.eebe1d31.chunk.css": "/curly-memory/static/css/9.eebe1d31.chunk.css",
+    "static/js/9.10b1d3eb.chunk.js": "/curly-memory/static/js/9.10b1d3eb.chunk.js",
+    "index.html": "/curly-memory/index.html",
+    "main.8738b80b.css.map": "/curly-memory/static/css/main.8738b80b.css.map",
+    "main.84f84e5d.js.map": "/curly-memory/static/js/main.84f84e5d.js.map",
+    "9.eebe1d31.chunk.css.map": "/curly-memory/static/css/9.eebe1d31.chunk.css.map",
+    "9.10b1d3eb.chunk.js.map": "/curly-memory/static/js/9.10b1d3eb.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.8738b80b.css",
-    "static/js/main.774a4d4f.js"
+    "static/js/main.84f84e5d.js"
   ]
 }
