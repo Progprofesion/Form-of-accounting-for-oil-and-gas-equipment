@@ -13,7 +13,11 @@ export const apiSlice = createApi({
       query: () => "/inputs",
       providesTags: ["inputs"],
     }),
+    getDescr: builder.query({
+      query: () => "/description",
+      providesTags: ["description"],
+    }),
   }),
 });
 
-export const { useGetDbQuery, useGetInputsQuery } = apiSlice;
+export const { useGetDbQuery, useGetInputsQuery, useGetDescrQuery } = apiSlice;

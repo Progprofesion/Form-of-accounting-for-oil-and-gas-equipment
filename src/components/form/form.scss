@@ -11,7 +11,7 @@
     position: relative;
     display: flex;
     justify-content: space-around;
-    width: 525px;
+    max-width: 50%;
     height: 20px;
     margin: 0 auto;
 
@@ -56,21 +56,16 @@
     top: -40px;
   }
 
-  &__name {
-    position: absolute;
-    left: 0px;
-  }
-
   &__buttonWrapp {
     position: relative;
     display: flex;
     justify-content: end;
     align-items: center;
-    width: 553px;
+    max-width: 50%;
     margin: 0 auto;
   }
   &__submith {
-    margin-right: 75px;
+    margin-right: 25px;
   }
   &__error {
     width: 150px;
@@ -102,7 +97,7 @@
     }
     input {
       width: 100%;
-      text-align: center;
+      // text-align: center;
     }
   }
   &__submith {
@@ -121,6 +116,15 @@
   bottom: -25px;
   right: 50%;
   transform: translateX(+50%);
+}
+
+.name {
+  position: absolute;
+  left: 160px;
+}
+.nameDescr {
+  position: absolute;
+  left: 0px;
 }
 
 .numValve1 {

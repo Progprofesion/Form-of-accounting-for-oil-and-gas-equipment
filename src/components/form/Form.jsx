@@ -3,12 +3,15 @@ import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import axios from "axios";
+import {
+  useGetDbQuery,
+  useGetInputsQuery,
+  useGetDescrQuery,
+} from "../api/apiSlice";
+
 import "./form.scss";
-import { useGetDbQuery, useGetInputsQuery } from "../api/apiSlice";
-import Input from "../input/Input";
 
 const Form = ({ boolean, countView, slice }) => {
-  // const [timeFrom, setTiemFrom] = useState(0);
   const {
     register,
     formState: { errors },
@@ -21,6 +24,7 @@ const Form = ({ boolean, countView, slice }) => {
 
   const { data: dataReport, isLoading, isError } = useGetDbQuery(null);
   const { data: getInputs } = useGetInputsQuery(null);
+  const { data: descr } = useGetDescrQuery(null);
 
   const department = useSelector((state) => state.dataSlice.department);
 
@@ -53,43 +57,12 @@ const Form = ({ boolean, countView, slice }) => {
     }
   }
 
-  const test = (dataReport) => {
-    if (dataReport && getInputs) {
-      return dataReport.db.map((item) => (
-        <div className="item" key={item.id}>
-          {Object.entries(item)
-            .filter(([key, value]) => key.startsWith("inValve"))
-            .map(([key, value]) => (
-              <p key={key}>{value}</p>
-            ))}
-        </div>
-      ));
-    }
-  };
-
-  let elements = test(dataReport);
-
-  // {dataReport
-  //   ? dataReport.db.map((data) => {
-  //       <div className="" key={data.id}>
-  //         {Object.entries(data)
-  //           .filter(([key, value]) =>
-  //             key.startsWith("inValve")
-  //           )
-  //           .map(([key, value]) => (
-  //             <p className={item.className} key={key}>
-  //               {value}
-  //             </p>
-  //           ))}
-  //       </div>;
-  //     })
-  //   : null}
-
   return (
     <form action="" onSubmit={handleSubmit(onSubmit)} className="form">
       {dataReport
         ? dataReport.db.slice(slice, dataReport.db.length).map((item) => {
             // Для переключения отображения количества элементов
+            // eslint-disable-next-line
             if (item.id <= countView) {
               return (
                 <div className="form__wrapp" key={item.id}>
@@ -121,9 +94,12 @@ const Form = ({ boolean, countView, slice }) => {
                           onChange={(e) => dateHandleInputChange(e, setDate)}
                           value={date}
                           onKeyDown={(event) => {
-                            if (
+                            if (event.key === "ArrowLeft") {
+                              // Обработка нажатия кнопки "стрелка влево"
+                            } else if (event.key === "ArrowRight") {
+                              // Обработка нажатия кнопки "стрелка вправо"
+                            } else if (
                               event.key !== "Backspace" &&
-                              event.key !== "." &&
                               !/^[0-9]+$/.test(event.key)
                             ) {
                               event.preventDefault();
@@ -148,9 +124,10 @@ const Form = ({ boolean, countView, slice }) => {
                           }
                           value={timeFrom}
                           onKeyDown={(event) => {
-                            if (
+                            if (event.key === "ArrowLeft") {
+                            } else if (event.key === "ArrowRight") {
+                            } else if (
                               event.key !== "Backspace" &&
-                              event.key !== "." &&
                               !/^[0-9]+$/.test(event.key)
                             ) {
                               event.preventDefault();
@@ -166,6 +143,7 @@ const Form = ({ boolean, countView, slice }) => {
                           {...register("timeBefore", { required: true })}
                           className="timeBefore"
                           placeholder="до"
+                          // style={{ border: "1px solid aliceblue" }}
                           type="text"
                           maxLength={5}
                           onChange={(e) =>
@@ -173,7 +151,9 @@ const Form = ({ boolean, countView, slice }) => {
                           }
                           value={timeBefore}
                           onKeyDown={(event) => {
-                            if (
+                            if (event.key === "ArrowLeft") {
+                            } else if (event.key === "ArrowRight") {
+                            } else if (
                               event.key !== "Backspace" &&
                               !/^[0-9]+$/.test(event.key)
                             ) {
@@ -187,47 +167,26 @@ const Form = ({ boolean, countView, slice }) => {
                     </div>
                   </div>
                   <div className="form__wrappInputs">
-                    <div className="numValve1">1</div>
-                    <div className="numValve2">2</div>
-                    <div className="numValve3">3</div>
-                    <div className="numValve4">4</div>
-                    <div className="numValve5">5</div>
-                    <div className="numValve6">6</div>
-                    <div className="dropper">Капельница</div>
-                    <div className="drainage">Дренаж</div>
-                    <div className="Mat">Мат</div>
-                    <div className="dropperVolume">Объем</div>
-                    <div className="dropperEC">EC</div>
-                    <div className="dropperPh">ph</div>
-                    <div className="drainVolume">Объем</div>
-                    <div className="drainEC">EC</div>
-                    <div className="drainPh">ph</div>
-                    <div className="matEC">EC</div>
-                    <div className="matPh">ph</div>
-                    {/* {getInputs
-                      ? getInputs.map((input) => {
-                          return (
-                            <input
-                              {...register(`${input.className}`, {
-                                required: true,
-                              })}
-                              key={input.className}
-                              type="text"
-                              className={`${input.className}`}
-                              maxLength={3}
-                              onKeyDown={(event) => {
-                                if (
-                                  event.key !== "Backspace" &&
-                                  event.key !== "." &&
-                                  !/^[0-9]+$/.test(event.key)
-                                ) {
-                                  event.preventDefault();
-                                }
-                              }}
-                            />
-                          );
+                    {descr
+                      ? descr.map((item) => {
+                          return Object.entries(item).map(([key, value]) => {
+                            return (
+                              <p
+                                style={{
+                                  border: "1px solid aliceblue",
+                                  display: "flex",
+                                  alignItems: "center",
+                                  justifyContent: "center",
+                                }}
+                                className={key}
+                                key={key}
+                              >
+                                {value}
+                              </p>
+                            );
+                          });
                         })
-                      : null} */}
+                      : null}
                     {boolean && getInputs
                       ? getInputs.map((input) => {
                           return (
@@ -240,9 +199,10 @@ const Form = ({ boolean, countView, slice }) => {
                               className={`${input.className}`}
                               maxLength={3}
                               onKeyDown={(event) => {
-                                if (
+                                if (event.key === "ArrowLeft") {
+                                } else if (event.key === "ArrowRight") {
+                                } else if (
                                   event.key !== "Backspace" &&
-                                  event.key !== "." &&
                                   !/^[0-9]+$/.test(event.key)
                                 ) {
                                   event.preventDefault();
@@ -251,32 +211,49 @@ const Form = ({ boolean, countView, slice }) => {
                             />
                           );
                         })
-                      : dataReport.db.map((report) => {
-                          return Object.entries(report)
+                      : getInputs
+                      ? dataReport.db.map((data, i) => {
+                          return Object.entries(item)
                             .filter(([key, value]) => key.startsWith("inValve"))
                             .map(([key, value]) => {
                               return (
-                                <p className={key} key={key}>
+                                <p
+                                  style={{
+                                    display: "flex",
+                                    alignItems: "center",
+                                    justifyContent: "center",
+                                    border: "1px solid aliceblue",
+                                  }}
+                                  className={key}
+                                  key={key}
+                                >
                                   {value}
                                 </p>
                               );
                             });
-
-                          console.log(report);
-                        })}
-
-                    <div className="numValve0">№ клапана полива</div>
+                        })
+                      : null}
                   </div>
                   {boolean ? (
                     <p className="form__error">Заполните все поля</p>
                   ) : null}
                   <div className="form__buttonWrapp">
-                    <input
-                      {...register("inValve1", { required: true })}
-                      type="text"
-                      placeholder="фамилия имя"
-                      className="form__name"
-                    />
+                    {boolean ? (
+                      <>
+                        <input
+                          {...register("name", { required: true })}
+                          type="text"
+                          placeholder="фамилия имя"
+                          className="name"
+                        />
+                        <p className="nameDescr">Измерения выполнил:</p>
+                      </>
+                    ) : (
+                      <>
+                        <p className="name">{item.name}</p>
+                        <p className="nameDescr">Измерения выполнил:</p>
+                      </>
+                    )}
                     {boolean ? (
                       <button disabled={!isValid} className="form__submith">
                         Отправить
