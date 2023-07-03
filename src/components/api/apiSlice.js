@@ -11,11 +11,9 @@ export const apiSlice = createApi({
     }),
     getInputs: builder.query({
       query: () => "/inputs",
-      providesTags: ["inputs"],
     }),
     getDescr: builder.query({
       query: () => "/description",
-      providesTags: ["description"],
     }),
   }),
 });

@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import axios from "axios";
+import { setData } from "../../store/reducer/dataSlice";
+import handleInputChange from "../../utils/handleInputChange";
 import {
   useGetDbQuery,
   useGetInputsQuery,
@@ -12,6 +14,10 @@ import {
 import "./form.scss";
 
 const Form = ({ boolean, countView, slice }) => {
+  const [timeFrom, setTimeFrom] = useState("");
+  const [timeBefore, setTimeBefore] = useState("");
+  const [date, setDate] = useState("");
+
   const {
     register,
     formState: { errors },
@@ -33,34 +39,11 @@ const Form = ({ boolean, countView, slice }) => {
     reset();
   };
 
-  const [timeFrom, setTimeFrom] = useState("");
-  const [timeBefore, setTimeBefore] = useState("");
-  const [date, setDate] = useState("");
-
-  function timeHandleInputChange(event, fn) {
-    const inputValue = event.target.value;
-    if (inputValue.length === 2 && inputValue !== "0") {
-      fn(inputValue + ":");
-    } else {
-      fn(inputValue);
-    }
-  }
-
-  function dateHandleInputChange(event, fn) {
-    const inputValue = event.target.value;
-    if (inputValue.length === 2 && inputValue !== "0") {
-      fn(inputValue + ".");
-    } else if (inputValue.length === 5) {
-      fn(inputValue + ".");
-    } else {
-      fn(inputValue);
-    }
-  }
-
   return (
     <form action="" onSubmit={handleSubmit(onSubmit)} className="form">
       {dataReport
-        ? dataReport.db.slice(slice, dataReport.db.length).map((item) => {
+        ? // slice нужен что-бы убрать первый инициализирующий объект в db.json
+          dataReport.db.slice(slice, dataReport.db.length).map((item) => {
             // Для переключения отображения количества элементов
             // eslint-disable-next-line
             if (item.id <= countView) {
@@ -91,13 +74,13 @@ const Form = ({ boolean, countView, slice }) => {
                           placeholder="00.00.0000"
                           className="dataMeasur"
                           maxLength={10}
-                          onChange={(e) => dateHandleInputChange(e, setDate)}
+                          onChange={(e) =>
+                            handleInputChange(e, setDate, ".", true)
+                          }
                           value={date}
                           onKeyDown={(event) => {
                             if (event.key === "ArrowLeft") {
-                              // Обработка нажатия кнопки "стрелка влево"
                             } else if (event.key === "ArrowRight") {
-                              // Обработка нажатия кнопки "стрелка вправо"
                             } else if (
                               event.key !== "Backspace" &&
                               !/^[0-9]+$/.test(event.key)
@@ -120,7 +103,7 @@ const Form = ({ boolean, countView, slice }) => {
                           type="text"
                           maxLength={5}
                           onChange={(e) =>
-                            timeHandleInputChange(e, setTimeFrom)
+                            handleInputChange(e, setTimeFrom, ":")
                           }
                           value={timeFrom}
                           onKeyDown={(event) => {
@@ -143,11 +126,10 @@ const Form = ({ boolean, countView, slice }) => {
                           {...register("timeBefore", { required: true })}
                           className="timeBefore"
                           placeholder="до"
-                          // style={{ border: "1px solid aliceblue" }}
                           type="text"
                           maxLength={5}
                           onChange={(e) =>
-                            timeHandleInputChange(e, setTimeBefore)
+                            handleInputChange(e, setTimeBefore, ":", false)
                           }
                           value={timeBefore}
                           onKeyDown={(event) => {
@@ -212,26 +194,25 @@ const Form = ({ boolean, countView, slice }) => {
                           );
                         })
                       : getInputs
-                      ? dataReport.db.map((data, i) => {
-                          return Object.entries(item)
-                            .filter(([key, value]) => key.startsWith("inValve"))
-                            .map(([key, value]) => {
-                              return (
-                                <p
-                                  style={{
-                                    display: "flex",
-                                    alignItems: "center",
-                                    justifyContent: "center",
-                                    border: "1px solid aliceblue",
-                                  }}
-                                  className={key}
-                                  key={key}
-                                >
-                                  {value}
-                                </p>
-                              );
-                            });
-                        })
+                      ? Object.entries(item)
+                          .filter(([key, value]) => key.startsWith("inValve"))
+                          .map(([key, value]) => {
+                            console.log(key);
+                            return (
+                              <p
+                                style={{
+                                  display: "flex",
+                                  alignItems: "center",
+                                  justifyContent: "center",
+                                  border: "1px solid aliceblue",
+                                }}
+                                className={key}
+                                key={key}
+                              >
+                                {value}
+                              </p>
+                            );
+                          })
                       : null}
                   </div>
                   {boolean ? (
