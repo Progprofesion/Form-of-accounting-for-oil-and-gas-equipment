@@ -44,7 +44,6 @@ const Form = ({ boolean, countView, slice }) => {
     <form action="" onSubmit={handleSubmit(onSubmit)} className="form">
       {dataReport
         ? // slice нужен что-бы убрать первый инициализирующий объект в db.json
-          // eslint-disable-next-line
           dataReport.db.slice(slice, dataReport.db.length).map((item) => {
             // Для переключения отображения количества элементов
             // eslint-disable-next-line
@@ -74,7 +73,7 @@ const Form = ({ boolean, countView, slice }) => {
                             required: true,
                           })}
                           placeholder="00.00.0000"
-                          className="dateMeasur"
+                          className="dataMeasur"
                           maxLength={10}
                           onChange={(e) =>
                             handleInputChange(e, setDateDot, ".", true)
@@ -227,16 +226,6 @@ const Form = ({ boolean, countView, slice }) => {
                           type="text"
                           placeholder="фамилия имя"
                           className="name"
-                          onKeyDown={(event) => {
-                            if (event.key === "ArrowLeft") {
-                            } else if (event.key === "ArrowRight") {
-                            } else if (
-                              event.key !== "Backspace" &&
-                              /^[0-9]+$/.test(event.key)
-                            ) {
-                              event.preventDefault();
-                            }
-                          }}
                         />
                         <p className="nameDescr">Измерения выполнил:</p>
                       </>

@@ -1,3 +1,4 @@
+import Report from "../report/Report";
 import Form from "../form/Form";
 import "./reportPage.scss";
 
