@@ -4,8 +4,6 @@ import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import axios from "axios";
 
-import handleInputChange from "../../utils/handleInputChange";
-
 import {
   useGetDbQuery,
   useGetInputsQuery,
@@ -15,10 +13,6 @@ import {
 import "./form.scss";
 
 const Form = ({ boolean, countView, slice }) => {
-  const [timeFrom, setTimeFrom] = useState("");
-  const [timeBefore, setTimeBefore] = useState("");
-  const [dateDot, setDateDot] = useState("");
-
   const {
     register,
     formState: { errors },
@@ -45,7 +39,7 @@ const Form = ({ boolean, countView, slice }) => {
       {dataReport
         ? // slice нужен что-бы убрать первый инициализирующий объект в db.json
           dataReport.db.slice(slice, dataReport.db.length).map((item) => {
-            // Для переключения отображения количества элементов
+            // item.id <= countView нужно для переключения отображения количества элементов
             // eslint-disable-next-line
             if (item.id <= countView) {
               return (
@@ -64,6 +58,7 @@ const Form = ({ boolean, countView, slice }) => {
                       <p className="form__department">{`Отдел: ${item.department}`}</p>
                     )}
                     <div className="form__wrappTime__data">
+                      {/* Ввод для Даты */}
                       <p> Дата измерений:</p>
                       {boolean ? (
                         <input
@@ -94,6 +89,7 @@ const Form = ({ boolean, countView, slice }) => {
                       )}
                     </div>
                     <div className="form__wrappTime__time">
+                      {/* Ввод для времени */}
                       Время замеров: <p>от</p>
                       {boolean ? (
                         <input
@@ -147,6 +143,7 @@ const Form = ({ boolean, countView, slice }) => {
                     </div>
                   </div>
                   <div className="form__wrappInputs">
+                    {/* Ввод для данных по клапану*/}
                     {descr
                       ? descr.map((item) => {
                           return Object.entries(item).map(([key, value]) => {
@@ -178,7 +175,6 @@ const Form = ({ boolean, countView, slice }) => {
                               type="text"
                               className={`${input.className}`}
                               maxLength={3}
-                              // defaultValue={null}
                               onKeyDown={(event) => {
                                 if (event.key === "ArrowLeft") {
                                 } else if (event.key === "ArrowRight") {
@@ -191,12 +187,8 @@ const Form = ({ boolean, countView, slice }) => {
                                 if (event.target.value.length === 1) {
                                   event.target.value = event.target.value + ".";
                                 }
-                                // if (event.target.value.length === 0) {
-                                //   event.target.value = "";
-                                // }
                                 if (event.key === "Backspace") {
                                   event.target.value =
-                                    "" +
                                     event.target.value.substring(
                                       0,
                                       event.target.value.length - 1
@@ -231,6 +223,7 @@ const Form = ({ boolean, countView, slice }) => {
                     <p className="form__error">Заполните все поля</p>
                   ) : null}
                   <div className="form__buttonWrapp">
+                    {/* Ввод для Имени */}
                     {boolean ? (
                       <>
                         <input
