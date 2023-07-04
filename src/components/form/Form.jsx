@@ -75,12 +75,11 @@ const Form = ({ boolean, countView, slice }) => {
                           placeholder="00.00.0000"
                           className="dataMeasur"
                           maxLength={10}
-                          onChange={(e) =>
-                            handleInputChange(e, setDateDot, ".", true)
-                          }
-                          value={dateDot}
                           onKeyDown={(event) => {
-                            if (event.key === "ArrowLeft") {
+                            if (
+                              event.key === "ArrowLeft" ||
+                              event.key === "."
+                            ) {
                             } else if (event.key === "ArrowRight") {
                             } else if (
                               event.key !== "Backspace" &&
@@ -103,12 +102,11 @@ const Form = ({ boolean, countView, slice }) => {
                           placeholder="от"
                           type="text"
                           maxLength={5}
-                          onChange={(e) =>
-                            handleInputChange(e, setTimeFrom, ":")
-                          }
-                          value={timeFrom}
                           onKeyDown={(event) => {
-                            if (event.key === "ArrowLeft") {
+                            if (
+                              event.key === "ArrowLeft" ||
+                              event.key === ":"
+                            ) {
                             } else if (event.key === "ArrowRight") {
                             } else if (
                               event.key !== "Backspace" &&
@@ -129,12 +127,11 @@ const Form = ({ boolean, countView, slice }) => {
                           placeholder="до"
                           type="text"
                           maxLength={5}
-                          onChange={(e) =>
-                            handleInputChange(e, setTimeBefore, ":", false)
-                          }
-                          value={timeBefore}
                           onKeyDown={(event) => {
-                            if (event.key === "ArrowLeft") {
+                            if (
+                              event.key === "ArrowLeft" ||
+                              event.key === ":"
+                            ) {
                             } else if (event.key === "ArrowRight") {
                             } else if (
                               event.key !== "Backspace" &&
@@ -194,11 +191,12 @@ const Form = ({ boolean, countView, slice }) => {
                                 if (event.target.value.length === 1) {
                                   event.target.value = event.target.value + ".";
                                 }
-                                if (event.target.value.length === 0) {
-                                  event.target.value = "";
-                                }
+                                // if (event.target.value.length === 0) {
+                                //   event.target.value = "";
+                                // }
                                 if (event.key === "Backspace") {
                                   event.target.value =
+                                    "" +
                                     event.target.value.substring(
                                       0,
                                       event.target.value.length - 1
@@ -240,6 +238,19 @@ const Form = ({ boolean, countView, slice }) => {
                           type="text"
                           placeholder="фамилия имя"
                           className="name"
+                          onKeyDown={(event) => {
+                            if (
+                              event.key === "ArrowLeft" ||
+                              event.key === ":"
+                            ) {
+                            } else if (event.key === "ArrowRight") {
+                            } else if (
+                              event.key !== "Backspace" &&
+                              /^[0-9]+$/.test(event.key)
+                            ) {
+                              event.preventDefault();
+                            }
+                          }}
                         />
                         <p className="nameDescr">Измерения выполнил:</p>
                       </>
