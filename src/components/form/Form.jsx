@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
@@ -38,6 +37,7 @@ const Form = ({ boolean, countView, slice }) => {
     <form action="" onSubmit={handleSubmit(onSubmit)} className="form">
       {dataReport
         ? // slice нужен что-бы убрать первый инициализирующий объект в db.json
+          // eslint-disable-next-line
           dataReport.db.slice(slice, dataReport.db.length).map((item) => {
             // item.id <= countView нужно для переключения отображения количества элементов
             // eslint-disable-next-line
