@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/test-task-diall-alliance/static/css/main.8738b80b.css",
-    "main.js": "/test-task-diall-alliance/static/js/main.2d976b45.js",
+    "main.css": "/test-task-diall-alliance/static/css/main.a5d7ca44.css",
+    "main.js": "/test-task-diall-alliance/static/js/main.d617ed63.js",
     "static/css/447.30b7a37b.chunk.css": "/test-task-diall-alliance/static/css/447.30b7a37b.chunk.css",
     "static/js/447.2274434f.chunk.js": "/test-task-diall-alliance/static/js/447.2274434f.chunk.js",
     "index.html": "/test-task-diall-alliance/index.html",
-    "main.8738b80b.css.map": "/test-task-diall-alliance/static/css/main.8738b80b.css.map",
-    "main.2d976b45.js.map": "/test-task-diall-alliance/static/js/main.2d976b45.js.map",
+    "main.a5d7ca44.css.map": "/test-task-diall-alliance/static/css/main.a5d7ca44.css.map",
+    "main.d617ed63.js.map": "/test-task-diall-alliance/static/js/main.d617ed63.js.map",
     "447.30b7a37b.chunk.css.map": "/test-task-diall-alliance/static/css/447.30b7a37b.chunk.css.map",
     "447.2274434f.chunk.js.map": "/test-task-diall-alliance/static/js/447.2274434f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8738b80b.css",
-    "static/js/main.2d976b45.js"
+    "static/css/main.a5d7ca44.css",
+    "static/js/main.d617ed63.js"
   ]
 }
