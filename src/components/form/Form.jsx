@@ -28,7 +28,8 @@ const Form = ({ boolean, countView, slice }) => {
   const department = useSelector((state) => state.dataSlice.department);
 
   const onSubmit = async (event) => {
-    await axios.post("http://localhost:3001/db", event);
+    await axios.post("https://server-vercel-mocha.vercel.app/posts", event);
+    console.log(event);
     reset();
   };
 
