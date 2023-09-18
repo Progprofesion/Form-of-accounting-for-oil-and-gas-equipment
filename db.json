@@ -1,0 +1,510 @@
+{
+  "db": [
+    {
+      "id": 1
+    },
+    {
+      "department": "1.1",
+      "dataMeasur": "11.11.1111",
+      "timeFrom": "11:11",
+      "timeBefore": "11:11",
+      "inValve1": "1",
+      "inValve2": "1",
+      "inValve3": "1",
+      "inValve4": "122",
+      "inValve5": "2",
+      "inValve6": "332",
+      "inValve7": "23",
+      "inValve8": "2",
+      "inValve9": "23",
+      "inValve10": "23",
+      "inValve11": "323",
+      "inValve12": "22",
+      "inValve13": "223",
+      "inValve14": "3",
+      "inValve15": "2",
+      "inValve16": "23",
+      "inValve17": "32",
+      "inValve18": "32",
+      "inValve19": "3",
+      "inValve20": "23",
+      "inValve21": "32",
+      "inValve22": "23",
+      "inValve23": "32",
+      "inValve24": "23",
+      "inValve25": "23",
+      "inValve26": "23",
+      "inValve27": "2",
+      "inValve28": "23",
+      "inValve29": "23",
+      "inValve30": "23",
+      "inValve31": "23",
+      "inValve32": "2",
+      "inValve33": "23",
+      "inValve34": "23",
+      "inValve35": "232",
+      "inValve36": "2",
+      "inValve37": "3",
+      "inValve38": "32",
+      "inValve39": "23",
+      "inValve40": "32",
+      "inValve41": "23",
+      "inValve42": "32",
+      "inValve43": "32",
+      "inValve44": "323",
+      "inValve45": "332",
+      "inValve46": "2",
+      "inValve47": "3",
+      "inValve48": "32",
+      "id": 2
+    },
+    {
+      "department": "1.1",
+      "dataMeasur": "1213213213",
+      "timeFrom": "21",
+      "timeBefore": "2213",
+      "name": "asdas",
+      "inValve1": "1.2",
+      "inValve2": "2.1",
+      "inValve3": "2",
+      "inValve4": "2",
+      "inValve5": "2",
+      "inValve6": "1",
+      "inValve7": "2.2",
+      "inValve8": "2",
+      "inValve9": "2.2",
+      "inValve10": "2",
+      "inValve11": "2.2",
+      "inValve12": "2",
+      "inValve13": "2",
+      "inValve14": "2",
+      "inValve15": "2.2",
+      "inValve16": "2.2",
+      "inValve17": "2",
+      "inValve18": "2",
+      "inValve19": "2",
+      "inValve20": "2",
+      "inValve21": "2",
+      "inValve22": "2.2",
+      "inValve23": "2",
+      "inValve24": "2.2",
+      "inValve25": "2.2",
+      "inValve26": "2",
+      "inValve27": "2",
+      "inValve28": "2",
+      "inValve29": "2",
+      "inValve30": "2",
+      "inValve31": "2.2",
+      "inValve32": "2",
+      "inValve33": "2.2",
+      "inValve34": "2",
+      "inValve35": "2",
+      "inValve36": "2",
+      "inValve37": "2",
+      "inValve38": "2",
+      "inValve39": "2",
+      "inValve40": "2",
+      "inValve41": "2",
+      "inValve42": "2",
+      "inValve43": "2.2",
+      "inValve44": "2",
+      "inValve45": "2.2",
+      "inValve46": "2.2",
+      "inValve47": "2",
+      "inValve48": "2.2",
+      "id": 3
+    },
+    {
+      "department": "1.1",
+      "dataMeasur": "213213123",
+      "timeFrom": "21321",
+      "timeBefore": "21321",
+      "inValve1": "2.2",
+      "inValve2": "2.2",
+      "inValve3": "2",
+      "inValve4": "2",
+      "inValve5": "2",
+      "inValve6": "2",
+      "inValve7": "2.2",
+      "inValve8": "2",
+      "inValve9": "2",
+      "inValve10": "2",
+      "inValve11": "2",
+      "inValve12": "2",
+      "inValve13": "2",
+      "inValve14": "2",
+      "inValve15": "2",
+      "inValve16": "2",
+      "inValve17": "2",
+      "inValve18": "2",
+      "inValve19": "2.2",
+      "inValve20": "2",
+      "inValve21": "2",
+      "inValve22": "2",
+      "inValve23": "2",
+      "inValve24": "2",
+      "inValve25": "2.2",
+      "inValve26": "2",
+      "inValve27": "2",
+      "inValve28": "2",
+      "inValve29": "22",
+      "inValve30": "2.2",
+      "inValve31": "2",
+      "inValve32": "2",
+      "inValve33": "2",
+      "inValve34": "2.2",
+      "inValve35": "232",
+      "inValve36": "2",
+      "inValve37": "2",
+      "inValve38": "2",
+      "inValve39": "2.2",
+      "inValve40": "2",
+      "inValve41": "2",
+      "inValve42": "2",
+      "inValve43": "2",
+      "inValve44": "2",
+      "inValve45": "2",
+      "inValve46": "2",
+      "inValve47": "2",
+      "inValve48": "2",
+      "name": "aweawae",
+      "id": 4
+    },
+    {
+      "department": 0,
+      "dataMeasur": "22222222",
+      "timeFrom": "22222",
+      "timeBefore": "22222",
+      "name": "sadadasd",
+      "inValve1": "2",
+      "inValve2": "2",
+      "inValve3": "2",
+      "inValve4": "2.2",
+      "inValve5": "2",
+      "inValve6": "2",
+      "inValve7": "2.2",
+      "inValve8": "2.2",
+      "inValve9": "2",
+      "inValve10": "2",
+      "inValve11": "3.3",
+      "inValve12": "3.3",
+      "inValve13": "3",
+      "inValve14": "2.2",
+      "inValve15": "2",
+      "inValve16": "2",
+      "inValve17": "3",
+      "inValve18": "2",
+      "inValve19": "2",
+      "inValve20": "3",
+      "inValve21": "3",
+      "inValve22": "3.3",
+      "inValve23": "3",
+      "inValve24": "2",
+      "inValve25": "3.3",
+      "inValve26": "3",
+      "inValve27": "3.3",
+      "inValve28": "3",
+      "inValve29": "3.3",
+      "inValve30": "3",
+      "inValve31": "3.3",
+      "inValve32": "2",
+      "inValve33": "3",
+      "inValve34": "3.3",
+      "inValve35": "2.2",
+      "inValve36": "2.3",
+      "inValve37": "3.2",
+      "inValve38": "2.1",
+      "inValve39": "2",
+      "inValve40": "2.1",
+      "inValve41": "3",
+      "inValve42": "3.3",
+      "inValve43": "3",
+      "inValve44": "2.3",
+      "inValve45": "2.3",
+      "inValve46": "2.3",
+      "inValve47": "2.3",
+      "inValve48": "2.1",
+      "id": 5
+    },
+    {
+      "department": 0,
+      "dataMeasur": "222222",
+      "timeFrom": "2222",
+      "timeBefore": "2222",
+      "inValve1": "1.2",
+      "inValve2": "2",
+      "inValve3": "2.2",
+      "inValve4": "2.2",
+      "inValve5": "2",
+      "inValve6": "2.2",
+      "inValve7": "2.2",
+      "inValve8": "2",
+      "inValve9": "2.2",
+      "inValve10": "2",
+      "inValve11": "2.2",
+      "inValve12": "2.2",
+      "inValve13": "2",
+      "inValve14": "2",
+      "inValve15": "2",
+      "inValve16": "2",
+      "inValve17": "2.2",
+      "inValve18": "2",
+      "inValve19": "2.2",
+      "inValve20": "2.2",
+      "inValve21": "2",
+      "inValve22": "2",
+      "inValve23": "2",
+      "inValve24": "232",
+      "inValve25": "2",
+      "inValve26": "2.2",
+      "inValve27": "2.2",
+      "inValve28": "2",
+      "inValve29": "212",
+      "inValve30": "2.2",
+      "inValve31": "2.2",
+      "inValve32": "222",
+      "inValve33": "2",
+      "inValve34": "232",
+      "inValve35": "2.2",
+      "inValve36": "2",
+      "inValve37": "2.2",
+      "inValve38": "2",
+      "inValve39": "2",
+      "inValve40": "2",
+      "inValve41": "2.2",
+      "inValve42": "2",
+      "inValve43": "2.2",
+      "inValve44": "2",
+      "inValve45": "2.2",
+      "inValve46": "2",
+      "inValve47": "2.2",
+      "inValve48": "2.2",
+      "name": "фцыывфывфывфыфы",
+      "id": 6
+    },
+    {
+      "department": 0,
+      "dataMeasur": "22222222",
+      "timeFrom": "22",
+      "timeBefore": "222",
+      "name": "asdasdasdasdsad",
+      "inValve1": "2.2",
+      "inValve2": "2.2",
+      "inValve3": "2",
+      "inValve4": "2.2",
+      "inValve5": "2.2",
+      "inValve6": "2.2",
+      "inValve7": "2",
+      "inValve8": "2",
+      "inValve9": "2",
+      "inValve10": "2.2",
+      "inValve11": "2",
+      "inValve12": "2",
+      "inValve13": "2",
+      "inValve14": "2",
+      "inValve15": "2",
+      "inValve16": "2.2",
+      "inValve17": "2.2",
+      "inValve18": "2",
+      "inValve19": "2",
+      "inValve20": "2",
+      "inValve21": "2",
+      "inValve22": "2.2",
+      "inValve23": "2",
+      "inValve24": "2.2",
+      "inValve25": "2",
+      "inValve26": "2",
+      "inValve27": "2",
+      "inValve28": "2",
+      "inValve29": "2",
+      "inValve30": "2",
+      "inValve31": "2",
+      "inValve32": "2.2",
+      "inValve33": "2",
+      "inValve34": "2",
+      "inValve35": "2",
+      "inValve36": "2",
+      "inValve37": "2",
+      "inValve38": "2.2",
+      "inValve39": "2",
+      "inValve40": "2",
+      "inValve41": "2.2",
+      "inValve42": "2",
+      "inValve43": "2",
+      "inValve44": "2",
+      "inValve45": "2.2",
+      "inValve46": "2",
+      "inValve47": "2",
+      "inValve48": "2",
+      "id": 7
+    }
+  ],
+  "description": [
+    {
+      "numValve0": "№ клапана полива",
+      "numValve1": "1",
+      "numValve2": "2",
+      "numValve3": "3",
+      "numValve4": "4",
+      "numValve5": "5",
+      "numValve6": "6",
+      "dropper": "Капельница",
+      "drainage": "Дренаж",
+      "Mat": "Мат",
+      "dropperVolume": "Объем",
+      "dropperEC": "EC",
+      "dropperPh": "Ph",
+      "drainVolume": "Объем",
+      "drainEC": "EC",
+      "drainPh": "ph",
+      "matEC": "EC",
+      "matPh": "ph"
+    }
+  ],
+  "inputs": [
+    {
+      "className": "inValve1"
+    },
+    {
+      "className": "inValve2"
+    },
+    {
+      "className": "inValve3"
+    },
+    {
+      "className": "inValve4"
+    },
+    {
+      "className": "inValve5"
+    },
+    {
+      "className": "inValve6"
+    },
+    {
+      "className": "inValve7"
+    },
+    {
+      "className": "inValve8"
+    },
+    {
+      "className": "inValve9"
+    },
+    {
+      "className": "inValve10"
+    },
+    {
+      "className": "inValve11"
+    },
+    {
+      "className": "inValve12"
+    },
+    {
+      "className": "inValve13"
+    },
+    {
+      "className": "inValve14"
+    },
+    {
+      "className": "inValve15"
+    },
+    {
+      "className": "inValve16"
+    },
+    {
+      "className": "inValve17"
+    },
+    {
+      "className": "inValve18"
+    },
+    {
+      "className": "inValve19"
+    },
+    {
+      "className": "inValve20"
+    },
+    {
+      "className": "inValve21"
+    },
+    {
+      "className": "inValve22"
+    },
+    {
+      "className": "inValve23"
+    },
+    {
+      "className": "inValve24"
+    },
+    {
+      "className": "inValve25"
+    },
+    {
+      "className": "inValve26"
+    },
+    {
+      "className": "inValve27"
+    },
+    {
+      "className": "inValve28"
+    },
+    {
+      "className": "inValve29"
+    },
+    {
+      "className": "inValve30"
+    },
+    {
+      "className": "inValve31"
+    },
+    {
+      "className": "inValve32"
+    },
+    {
+      "className": "inValve33"
+    },
+    {
+      "className": "inValve34"
+    },
+    {
+      "className": "inValve35"
+    },
+    {
+      "className": "inValve36"
+    },
+    {
+      "className": "inValve37"
+    },
+    {
+      "className": "inValve38"
+    },
+    {
+      "className": "inValve39"
+    },
+    {
+      "className": "inValve40"
+    },
+    {
+      "className": "inValve41"
+    },
+    {
+      "className": "inValve42"
+    },
+    {
+      "className": "inValve43"
+    },
+    {
+      "className": "inValve44"
+    },
+    {
+      "className": "inValve45"
+    },
+    {
+      "className": "inValve46"
+    },
+    {
+      "className": "inValve47"
+    },
+    {
+      "className": "inValve48"
+    }
+  ]
+}

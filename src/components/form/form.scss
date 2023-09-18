@@ -1,0 +1,395 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  &__wrapp {
+    margin-top: 60px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid aliceblue;
+  }
+
+  &__wrappTime {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    max-width: 50%;
+    height: 20px;
+    margin: 0 auto;
+
+    &__data {
+      display: flex;
+      :first-child {
+        margin-right: 10px;
+      }
+      width: 270px;
+      input {
+        width: 100px;
+      }
+    }
+
+    &__time {
+      display: flex;
+      justify-content: space-around;
+      width: 290px;
+      :nth-child(1) {
+        margin: 0 3px 0 3px;
+      }
+      :nth-child(2) {
+        margin: 0 3px 0 3px;
+      }
+      :nth-child(3) {
+        margin: 0 3px 0 3px;
+      }
+      input {
+        width: 50px;
+      }
+    }
+  }
+  &__wrappValve {
+    margin-top: 20px;
+    text-align: right;
+    &__numValve {
+      border: 1px solid aliceblue;
+    }
+  }
+  &__department {
+    position: absolute;
+    top: -40px;
+  }
+
+  &__buttonWrapp {
+    position: relative;
+    display: flex;
+    // WARNING
+    justify-content: space-between;
+    align-items: center;
+    max-width: 50%;
+    margin: 0 auto;
+  }
+  &__submith {
+    height: 35px;
+    width: 100px;
+  }
+
+  &__receiveReport {
+    width: 100px;
+    height: 35px;
+  }
+  &__error {
+    // width: 150px;
+    text-align: center;
+    margin: -20px auto 10px;
+  }
+
+  &__wrappInputs {
+    position: relative;
+    max-width: 50%;
+    min-height: 250px;
+    margin: 25px auto 35px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". . . dropper dropper dropper drainage drainage drainage Mat Mat"
+      "numValve0 numValve0 numValve0 dropperVolume dropperEC dropperPh drainVolume drainEC drainPh matEC matPh"
+      "numValve1 numValve1 numValve1 inValve1 inValve2 inValve3 inValve4 inValve5 inValve6 inValve7 inValve8"
+      "numValve2 numValve2 numValve2 inValve9 inValve10 inValve11 inValve12 inValve13 inValve14 inValve15 inValve16"
+      "numValve3 numValve3 numValve3 inValve17 inValve18 inValve19 inValve20 inValve21 inValve22 inValve23 inValve24"
+      "numValve4 numValve4 numValve4 inValve25 inValve26 inValve27 inValve28 inValve29 inValve30 inValve31 inValve32"
+      "numValve5 numValve5 numValve5 inValve33 inValve34 inValve35 inValve36 inValve37 inValve38 inValve39 inValve40"
+      "numValve6 numValve6 numValve6 inValve41 inValve42 inValve43 inValve44 inValve45 inValve46 inValve47 inValve48";
+    div {
+      border: 1px solid aliceblue;
+    }
+    input {
+      width: 100%;
+      // text-align: center;
+    }
+  }
+  // &__submith {
+  //   width: 100px;
+  //   height: 35px;
+  // }
+}
+
+.inValveValid {
+  position: absolute;
+  bottom: -25px;
+  right: 50%;
+  transform: translateX(+50%);
+}
+
+// .name {
+// position: absolute;
+// left: 160px;
+// }
+// .nameDescr {
+//   position: absolute;
+//   left: 0px;
+// }
+
+.numValve1 {
+  grid-area: numValve1;
+}
+
+.numValve2 {
+  grid-area: numValve2;
+}
+
+.numValve3 {
+  grid-area: numValve3;
+}
+
+.numValve4 {
+  grid-area: numValve4;
+}
+
+.numValve5 {
+  grid-area: numValve5;
+}
+
+.numValve6 {
+  grid-area: numValve6;
+}
+
+.dropper {
+  grid-area: dropper;
+}
+
+.drainage {
+  grid-area: drainage;
+}
+
+.Mat {
+  grid-area: Mat;
+}
+
+.dropperVolume {
+  grid-area: dropperVolume;
+}
+
+.dropperEC {
+  grid-area: dropperEC;
+}
+
+.dropperPh {
+  grid-area: dropperPh;
+}
+
+.drainVolume {
+  grid-area: drainVolume;
+}
+
+.drainEC {
+  grid-area: drainEC;
+}
+
+.drainPh {
+  grid-area: drainPh;
+}
+
+.matEC {
+  grid-area: matEC;
+}
+
+.matPh {
+  grid-area: matPh;
+}
+
+.inValve1 {
+  grid-area: inValve1;
+}
+
+.inValve2 {
+  grid-area: inValve2;
+}
+
+.inValve3 {
+  grid-area: inValve3;
+}
+
+.inValve4 {
+  grid-area: inValve4;
+}
+
+.inValve5 {
+  grid-area: inValve5;
+}
+
+.inValve6 {
+  grid-area: inValve6;
+}
+
+.inValve7 {
+  grid-area: inValve7;
+}
+
+.inValve8 {
+  grid-area: inValve8;
+}
+
+.inValve9 {
+  grid-area: inValve9;
+}
+
+.inValve10 {
+  grid-area: inValve10;
+}
+
+.inValve11 {
+  grid-area: inValve11;
+}
+
+.inValve12 {
+  grid-area: inValve12;
+}
+
+.inValve13 {
+  grid-area: inValve13;
+}
+
+.inValve14 {
+  grid-area: inValve14;
+}
+
+.inValve15 {
+  grid-area: inValve15;
+}
+
+.inValve16 {
+  grid-area: inValve16;
+}
+
+.inValve17 {
+  grid-area: inValve17;
+}
+
+.inValve18 {
+  grid-area: inValve18;
+}
+
+.inValve19 {
+  grid-area: inValve19;
+}
+
+.inValve20 {
+  grid-area: inValve20;
+}
+
+.inValve21 {
+  grid-area: inValve21;
+}
+
+.inValve22 {
+  grid-area: inValve22;
+}
+
+.inValve23 {
+  grid-area: inValve23;
+}
+
+.inValve24 {
+  grid-area: inValve24;
+}
+
+.inValve25 {
+  grid-area: inValve25;
+}
+
+.inValve26 {
+  grid-area: inValve26;
+}
+
+.inValve27 {
+  grid-area: inValve27;
+}
+
+.inValve28 {
+  grid-area: inValve28;
+}
+
+.inValve29 {
+  grid-area: inValve29;
+}
+
+.inValve30 {
+  grid-area: inValve30;
+}
+
+.inValve31 {
+  grid-area: inValve31;
+}
+
+.inValve32 {
+  grid-area: inValve32;
+}
+
+.inValve33 {
+  grid-area: inValve33;
+}
+
+.inValve34 {
+  grid-area: inValve34;
+}
+
+.inValve35 {
+  grid-area: inValve35;
+}
+
+.inValve36 {
+  grid-area: inValve36;
+}
+
+.inValve37 {
+  grid-area: inValve37;
+}
+
+.inValve38 {
+  grid-area: inValve38;
+}
+
+.inValve39 {
+  grid-area: inValve39;
+}
+
+.inValve40 {
+  grid-area: inValve40;
+}
+
+.inValve41 {
+  grid-area: inValve41;
+}
+
+.inValve42 {
+  grid-area: inValve42;
+}
+
+.inValve43 {
+  grid-area: inValve43;
+}
+
+.inValve44 {
+  grid-area: inValve44;
+}
+
+.inValve45 {
+  grid-area: inValve45;
+}
+
+.inValve46 {
+  grid-area: inValve46;
+}
+
+.inValve47 {
+  grid-area: inValve47;
+}
+
+.inValve48 {
+  grid-area: inValve48;
+}
+
+.numValve0 {
+  grid-area: numValve0;
+}
