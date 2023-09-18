@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/test-task-diall-alliance/static/css/main.a5d7ca44.css",
-    "main.js": "/test-task-diall-alliance/static/js/main.d617ed63.js",
-    "static/css/447.30b7a37b.chunk.css": "/test-task-diall-alliance/static/css/447.30b7a37b.chunk.css",
-    "static/js/447.2274434f.chunk.js": "/test-task-diall-alliance/static/js/447.2274434f.chunk.js",
-    "index.html": "/test-task-diall-alliance/index.html",
-    "main.a5d7ca44.css.map": "/test-task-diall-alliance/static/css/main.a5d7ca44.css.map",
-    "main.d617ed63.js.map": "/test-task-diall-alliance/static/js/main.d617ed63.js.map",
-    "447.30b7a37b.chunk.css.map": "/test-task-diall-alliance/static/css/447.30b7a37b.chunk.css.map",
-    "447.2274434f.chunk.js.map": "/test-task-diall-alliance/static/js/447.2274434f.chunk.js.map"
+    "main.css": "/form-of-accounting-for-oil-and-gas-equipment/static/css/main.a5d7ca44.css",
+    "main.js": "/form-of-accounting-for-oil-and-gas-equipment/static/js/main.1c8e4608.js",
+    "static/css/447.30b7a37b.chunk.css": "/form-of-accounting-for-oil-and-gas-equipment/static/css/447.30b7a37b.chunk.css",
+    "static/js/447.60d70bdf.chunk.js": "/form-of-accounting-for-oil-and-gas-equipment/static/js/447.60d70bdf.chunk.js",
+    "index.html": "/form-of-accounting-for-oil-and-gas-equipment/index.html",
+    "main.a5d7ca44.css.map": "/form-of-accounting-for-oil-and-gas-equipment/static/css/main.a5d7ca44.css.map",
+    "main.1c8e4608.js.map": "/form-of-accounting-for-oil-and-gas-equipment/static/js/main.1c8e4608.js.map",
+    "447.30b7a37b.chunk.css.map": "/form-of-accounting-for-oil-and-gas-equipment/static/css/447.30b7a37b.chunk.css.map",
+    "447.60d70bdf.chunk.js.map": "/form-of-accounting-for-oil-and-gas-equipment/static/js/447.60d70bdf.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a5d7ca44.css",
-    "static/js/main.d617ed63.js"
+    "static/js/main.1c8e4608.js"
   ]
 }
