@@ -1,3 +1,5 @@
+ https://progprofesion.github.io/Form-of-accounting-for-oil-and-gas-equipment/
+ 
 # React App
 Форма ввода данных для каждого отделения и отчет, включающий в себя данные со всех отделений.
 
