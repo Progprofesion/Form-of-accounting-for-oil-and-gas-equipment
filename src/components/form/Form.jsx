@@ -7,6 +7,8 @@ import {
   useGetDbQuery,
   useGetInputsQuery,
   useGetDescrQuery,
+  useGetReportsQuery,
+  // useCreatePostMutationQuery,
 } from "../api/apiSlice";
 
 import "./form.scss";
@@ -24,15 +26,25 @@ const Form = ({ boolean, countView, slice }) => {
   const { data: dataReport } = useGetDbQuery(null);
   const { data: getInputs } = useGetInputsQuery(null);
   const { data: descr } = useGetDescrQuery(null);
+  const { data: reports } = useGetReportsQuery();
 
   const department = useSelector((state) => state.dataSlice.department);
-
   const onSubmit = async (event) => {
-    await axios.post("https://server-vercel-mocha.vercel.app/posts", event);
-    console.log(event);
+    // axios
+    //   .post("https://server-vercel-mocha.vercel.app/posts", event, {
+    //     headers: {
+    //       "Content-Type": "application/json",
+    //     },
+    //   })
+    //   .then((response) => {
+    //     console.log(response.data);
+    //   })
+    //   .catch((error) => {
+    //     console.error(error);
+    //   });
     reset();
   };
-
+  console.log(reports);
   return (
     <form action="" onSubmit={handleSubmit(onSubmit)} className="form">
       {dataReport
@@ -249,8 +261,8 @@ const Form = ({ boolean, countView, slice }) => {
                       </>
                     ) : (
                       <>
-                        <p className="name">{item.name}</p>
                         <p className="nameDescr">Измерения выполнил:</p>
+                        <p className="name">{item.name}</p>
                       </>
                     )}
 

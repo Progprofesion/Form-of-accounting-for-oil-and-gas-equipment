@@ -7,8 +7,20 @@ export const apiSlice = createApi({
   }),
   tagTypes: ["db"],
   endpoints: (builder) => ({
+    createPost: builder.mutation({
+      query: (data) => ({
+        url: "/posts",
+        method: "POST",
+        body: data,
+      }),
+      invalidatesTags: ["db"],
+    }),
     getDb: builder.query({
       query: () => "/db",
+      providesTags: ["db"],
+    }),
+    getReports: builder.query({
+      query: () => "/posts",
       providesTags: ["db"],
     }),
     getInputs: builder.query({
@@ -20,4 +32,10 @@ export const apiSlice = createApi({
   }),
 });
 
-export const { useGetDbQuery, useGetInputsQuery, useGetDescrQuery } = apiSlice;
+export const {
+  useGetDbQuery,
+  useGetInputsQuery,
+  useGetDescrQuery,
+  useGetReportsQuery,
+  useCreatePostMutationQuery,
+} = apiSlice;
