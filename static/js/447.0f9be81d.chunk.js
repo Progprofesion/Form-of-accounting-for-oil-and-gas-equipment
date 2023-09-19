@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkform_of_accounting_for_oil_and_gas_equipment=self.webpackChunkform_of_accounting_for_oil_and_gas_equipment||[]).push([[447],{447:function(n,e,o){o.r(e),o.d(e,{default:function(){return i}});var c=o(222),a=o(184),i=function(){return(0,a.jsx)("section",{className:"reportPage",children:(0,a.jsx)("div",{className:"container",children:(0,a.jsx)(c.Z,{boolean:!1,countView:1/0,slice:1})})})}}}]);
+//# sourceMappingURL=447.0f9be81d.chunk.js.map
