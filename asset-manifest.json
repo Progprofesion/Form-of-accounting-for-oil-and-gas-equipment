@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/Form-of-accounting-for-oil-and-gas-equipment/static/css/main.a5d7ca44.css",
-    "main.js": "/Form-of-accounting-for-oil-and-gas-equipment/static/js/main.742581be.js",
+    "main.css": "/Form-of-accounting-for-oil-and-gas-equipment/static/css/main.4d3b9b2d.css",
+    "main.js": "/Form-of-accounting-for-oil-and-gas-equipment/static/js/main.4ec8153b.js",
     "static/css/447.30b7a37b.chunk.css": "/Form-of-accounting-for-oil-and-gas-equipment/static/css/447.30b7a37b.chunk.css",
-    "static/js/447.0f9be81d.chunk.js": "/Form-of-accounting-for-oil-and-gas-equipment/static/js/447.0f9be81d.chunk.js",
+    "static/js/447.5d24123c.chunk.js": "/Form-of-accounting-for-oil-and-gas-equipment/static/js/447.5d24123c.chunk.js",
     "index.html": "/Form-of-accounting-for-oil-and-gas-equipment/index.html",
-    "main.a5d7ca44.css.map": "/Form-of-accounting-for-oil-and-gas-equipment/static/css/main.a5d7ca44.css.map",
-    "main.742581be.js.map": "/Form-of-accounting-for-oil-and-gas-equipment/static/js/main.742581be.js.map",
+    "main.4d3b9b2d.css.map": "/Form-of-accounting-for-oil-and-gas-equipment/static/css/main.4d3b9b2d.css.map",
+    "main.4ec8153b.js.map": "/Form-of-accounting-for-oil-and-gas-equipment/static/js/main.4ec8153b.js.map",
     "447.30b7a37b.chunk.css.map": "/Form-of-accounting-for-oil-and-gas-equipment/static/css/447.30b7a37b.chunk.css.map",
-    "447.0f9be81d.chunk.js.map": "/Form-of-accounting-for-oil-and-gas-equipment/static/js/447.0f9be81d.chunk.js.map"
+    "447.5d24123c.chunk.js.map": "/Form-of-accounting-for-oil-and-gas-equipment/static/js/447.5d24123c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a5d7ca44.css",
-    "static/js/main.742581be.js"
+    "static/css/main.4d3b9b2d.css",
+    "static/js/main.4ec8153b.js"
   ]
 }
