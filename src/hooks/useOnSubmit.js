@@ -2,7 +2,6 @@
 
 const useOnSubmit = (reset) => {
   const onSubmit = (data) => {
-    localStorage.setItem("reports", JSON.stringify([data]));
     reset();
   };
 

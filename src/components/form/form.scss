@@ -65,6 +65,9 @@
     max-width: 50%;
     margin: 0 auto;
   }
+  &__nameWrapp {
+    display: flex;
+  }
   &__submit {
     height: 35px;
     width: 100px;
@@ -81,6 +84,13 @@
     // width: 150px;
     text-align: center;
     margin: -20px auto 10px;
+  }
+
+  &__invalveReport {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid aliceblue;
   }
 
   &__wrappInputs {
@@ -108,13 +118,8 @@
     }
     input {
       width: 100%;
-      // text-align: center;
     }
   }
-  // &__submit {
-  //   width: 100px;
-  //   height: 35px;
-  // }
 }
 
 .inValveValid {
@@ -124,10 +129,10 @@
   transform: translateX(+50%);
 }
 
-// .name {
-// position: absolute;
-// left: 160px;
-// }
+.name {
+  margin-left: 10px;
+}
+
 // .nameDescr {
 //   position: absolute;
 //   left: 0px;

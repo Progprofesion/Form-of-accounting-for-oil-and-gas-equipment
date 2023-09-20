@@ -1,9 +1,9 @@
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
-// import onSubmit from "../../utils/onSubmit";
 import validName from "../../utils/validName";
-import validMeasurements from "../../utils/validMeasurements";
+import validMeasurementTime from "../../utils/validMeasurementTime";
+import validDataMesurements from "../../utils/validDataMesurements";
 import validValves from "../../utils/validValves";
 import useOnSubmit from "../../hooks/useOnSubmit";
 
@@ -11,8 +11,6 @@ import {
   useGetDbQuery,
   useGetInputsQuery,
   useGetDescrQuery,
-  // useGetReportsQuery,
-  // useCreatePostMutationQuery,
 } from "../api/apiSlice";
 
 import "./form.scss";
@@ -33,8 +31,6 @@ const Form = ({ boolean, countView, slice }) => {
 
   const department = useSelector((state) => state.dataSlice.department);
   const { onSubmit } = useOnSubmit(reset);
-
-  let reports = localStorage.getItem("reports");
 
   return (
     <form action="" onSubmit={handleSubmit(onSubmit)} className="form">
@@ -73,7 +69,7 @@ const Form = ({ boolean, countView, slice }) => {
                           placeholder="00.00.0000"
                           className="dataMeasur"
                           maxLength={10}
-                          onKeyDown={(event) => validMeasurements(event)}
+                          onKeyDown={(event) => validDataMesurements(event)}
                         />
                       ) : (
                         item.dataMeasur
@@ -89,7 +85,7 @@ const Form = ({ boolean, countView, slice }) => {
                           placeholder="от"
                           type="text"
                           maxLength={5}
-                          onKeyDown={(event) => validMeasurements(event)}
+                          onKeyDown={(event) => validMeasurementTime(event)}
                         />
                       ) : (
                         <p>{item.timeFrom}</p>
@@ -102,7 +98,7 @@ const Form = ({ boolean, countView, slice }) => {
                           placeholder="до"
                           type="text"
                           maxLength={5}
-                          onKeyDown={(event) => validMeasurements(event)}
+                          onKeyDown={(event) => validMeasurementTime(event)}
                         />
                       ) : (
                         item.timeBefore
@@ -116,13 +112,7 @@ const Form = ({ boolean, countView, slice }) => {
                           return Object.entries(item).map(([key, value]) => {
                             return (
                               <p
-                                style={{
-                                  border: "1px solid aliceblue",
-                                  display: "flex",
-                                  alignItems: "center",
-                                  justifyContent: "center",
-                                }}
-                                className={key}
+                                className={`${key} form__invalveReport`}
                                 key={key}
                               >
                                 {value}
@@ -152,13 +142,7 @@ const Form = ({ boolean, countView, slice }) => {
                           .map(([key, value]) => {
                             return (
                               <p
-                                style={{
-                                  display: "flex",
-                                  alignItems: "center",
-                                  justifyContent: "center",
-                                  border: "1px solid aliceblue",
-                                }}
-                                className={key}
+                                className={`${key} form__invalveReport`}
                                 key={key}
                               >
                                 {value}
@@ -168,7 +152,9 @@ const Form = ({ boolean, countView, slice }) => {
                       : null}
                   </div>
                   {!isValid ? (
-                    <p className="form__error">Вы заполнили не все поля</p>
+                    <p className="form__error">
+                      Все данные должны быть заполнены
+                    </p>
                   ) : null}
                   <div className="form__buttonWrapp">
                     {/* Ввод для Имени */}
@@ -184,10 +170,10 @@ const Form = ({ boolean, countView, slice }) => {
                         />
                       </>
                     ) : (
-                      <>
+                      <div className="form__nameWrapp">
                         <p className="nameDescr">Измерения выполнил:</p>
                         <p className="name">{item.name}</p>
-                      </>
+                      </div>
                     )}
 
                     {boolean ? (
