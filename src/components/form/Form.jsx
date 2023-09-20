@@ -1,13 +1,17 @@
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
-import axios from "axios";
+// import onSubmit from "../../utils/onSubmit";
+import validName from "../../utils/validName";
+import validMeasurements from "../../utils/validMeasurements";
+import validValves from "../../utils/validValves";
+import useOnSubmit from "../../hooks/useOnSubmit";
 
 import {
   useGetDbQuery,
   useGetInputsQuery,
   useGetDescrQuery,
-  useGetReportsQuery,
+  // useGetReportsQuery,
   // useCreatePostMutationQuery,
 } from "../api/apiSlice";
 
@@ -26,25 +30,12 @@ const Form = ({ boolean, countView, slice }) => {
   const { data: dataReport } = useGetDbQuery(null);
   const { data: getInputs } = useGetInputsQuery(null);
   const { data: descr } = useGetDescrQuery(null);
-  const { data: reports } = useGetReportsQuery();
 
   const department = useSelector((state) => state.dataSlice.department);
-  const onSubmit = async (event) => {
-    // axios
-    //   .post("https://server-vercel-mocha.vercel.app/posts", event, {
-    //     headers: {
-    //       "Content-Type": "application/json",
-    //     },
-    //   })
-    //   .then((response) => {
-    //     console.log(response.data);
-    //   })
-    //   .catch((error) => {
-    //     console.error(error);
-    //   });
-    reset();
-  };
-  console.log(reports);
+  const { onSubmit } = useOnSubmit(reset);
+
+  let reports = localStorage.getItem("reports");
+
   return (
     <form action="" onSubmit={handleSubmit(onSubmit)} className="form">
       {dataReport
@@ -82,19 +73,7 @@ const Form = ({ boolean, countView, slice }) => {
                           placeholder="00.00.0000"
                           className="dataMeasur"
                           maxLength={10}
-                          onKeyDown={(event) => {
-                            if (
-                              event.key === "ArrowLeft" ||
-                              event.key === "."
-                            ) {
-                            } else if (event.key === "ArrowRight") {
-                            } else if (
-                              event.key !== "Backspace" &&
-                              !/^[0-9]+$/.test(event.key)
-                            ) {
-                              event.preventDefault();
-                            }
-                          }}
+                          onKeyDown={(event) => validMeasurements(event)}
                         />
                       ) : (
                         item.dataMeasur
@@ -110,19 +89,7 @@ const Form = ({ boolean, countView, slice }) => {
                           placeholder="от"
                           type="text"
                           maxLength={5}
-                          onKeyDown={(event) => {
-                            if (
-                              event.key === "ArrowLeft" ||
-                              event.key === ":"
-                            ) {
-                            } else if (event.key === "ArrowRight") {
-                            } else if (
-                              event.key !== "Backspace" &&
-                              !/^[0-9]+$/.test(event.key)
-                            ) {
-                              event.preventDefault();
-                            }
-                          }}
+                          onKeyDown={(event) => validMeasurements(event)}
                         />
                       ) : (
                         <p>{item.timeFrom}</p>
@@ -135,19 +102,7 @@ const Form = ({ boolean, countView, slice }) => {
                           placeholder="до"
                           type="text"
                           maxLength={5}
-                          onKeyDown={(event) => {
-                            if (
-                              event.key === "ArrowLeft" ||
-                              event.key === ":"
-                            ) {
-                            } else if (event.key === "ArrowRight") {
-                            } else if (
-                              event.key !== "Backspace" &&
-                              !/^[0-9]+$/.test(event.key)
-                            ) {
-                              event.preventDefault();
-                            }
-                          }}
+                          onKeyDown={(event) => validMeasurements(event)}
                         />
                       ) : (
                         item.timeBefore
@@ -187,26 +142,7 @@ const Form = ({ boolean, countView, slice }) => {
                               type="text"
                               className={`${input.className}`}
                               maxLength={3}
-                              onKeyDown={(event) => {
-                                if (event.key === "ArrowLeft") {
-                                } else if (event.key === "ArrowRight") {
-                                } else if (
-                                  event.key !== "Backspace" &&
-                                  !/^[0-9]+$/.test(event.key)
-                                ) {
-                                  event.preventDefault();
-                                }
-                                if (event.target.value.length === 1) {
-                                  event.target.value = event.target.value + ".";
-                                }
-                                if (event.key === "Backspace") {
-                                  event.target.value =
-                                    event.target.value.substring(
-                                      0,
-                                      event.target.value.length - 1
-                                    );
-                                }
-                              }}
+                              onKeyDown={(event) => validValves(event)}
                             />
                           );
                         })
@@ -244,19 +180,7 @@ const Form = ({ boolean, countView, slice }) => {
                           type="text"
                           placeholder="фамилия имя"
                           className="name"
-                          onKeyDown={(event) => {
-                            if (
-                              event.key === "ArrowLeft" ||
-                              event.key === ":"
-                            ) {
-                            } else if (event.key === "ArrowRight") {
-                            } else if (
-                              event.key !== "Backspace" &&
-                              /^[0-9]+$/.test(event.key)
-                            ) {
-                              event.preventDefault();
-                            }
-                          }}
+                          onKeyDown={(event) => validName(event)}
                         />
                       </>
                     ) : (
@@ -286,7 +210,12 @@ const Form = ({ boolean, countView, slice }) => {
                         </button>
                       </Link>
                     )}
-                    <button className="form__submith">Отправить</button>
+                    <button
+                      disabled={!isValid}
+                      className={boolean ? "form__submit" : "form__submitNone"}
+                    >
+                      Отправить
+                    </button>
                   </div>
                 </div>
               );

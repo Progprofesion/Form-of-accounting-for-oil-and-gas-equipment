@@ -65,9 +65,12 @@
     max-width: 50%;
     margin: 0 auto;
   }
-  &__submith {
+  &__submit {
     height: 35px;
     width: 100px;
+  }
+  &__submitNone {
+    display: none;
   }
 
   &__receiveReport {
@@ -108,7 +111,7 @@
       // text-align: center;
     }
   }
-  // &__submith {
+  // &__submit {
   //   width: 100px;
   //   height: 35px;
   // }

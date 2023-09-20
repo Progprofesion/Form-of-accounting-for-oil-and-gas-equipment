@@ -19,10 +19,6 @@ export const apiSlice = createApi({
       query: () => "/db",
       providesTags: ["db"],
     }),
-    getReports: builder.query({
-      query: () => "/posts",
-      providesTags: ["db"],
-    }),
     getInputs: builder.query({
       query: () => "/inputs",
     }),
@@ -36,6 +32,5 @@ export const {
   useGetDbQuery,
   useGetInputsQuery,
   useGetDescrQuery,
-  useGetReportsQuery,
   useCreatePostMutationQuery,
 } = apiSlice;
